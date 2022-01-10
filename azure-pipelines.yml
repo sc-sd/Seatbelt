@@ -43,3 +43,8 @@ steps:
     targetPath: '$(Pipeline.Workspace)'
     artifactType: 'pipeline'
     artifactName: 'SeatBelt'
+
+- task: UniversalPackages@0
+  inputs:
+    command: publish
+    vstsFeedPublish: '$(feedname)'
