@@ -45,9 +45,19 @@ steps:
     artifactName: 'seatbelt'
 
 
+# - task: UniversalPackages@0
+#   inputs:
+#     command: publish
+#     vstsFeedPublish: 'acff27b9-e08e-437b-b42c-81bf094390c0/4a8e6bb5-62e4-4723-9954-efca922eeb33'
+#     vstsFeedPackagePublish: 'seatbelt'
+#     publishDirectory: 
+
 - task: UniversalPackages@0
   inputs:
-    command: publish
+    command: 'publish'
+    publishDirectory: '$(Build.ArtifactStagingDirectory)\Seatbelt\bin\Release\Seatbelt.exe'
+    feedsToUsePublish: 'internal'
     vstsFeedPublish: 'acff27b9-e08e-437b-b42c-81bf094390c0/4a8e6bb5-62e4-4723-9954-efca922eeb33'
     vstsFeedPackagePublish: 'seatbelt'
+    versionOption: 'patch'
 
