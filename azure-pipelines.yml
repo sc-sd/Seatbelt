@@ -47,4 +47,5 @@ steps:
 - task: UniversalPackages@0
   inputs:
     command: publish
-    vstsFeedPublish: '$(feedname)'
+    vstsFeedPublish: 'feec4f83-ea15-4453-bda1-0836f4ceb42c'
+
