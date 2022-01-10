@@ -42,7 +42,7 @@ steps:
   inputs:
     targetPath: '$(Pipeline.Workspace)'
     artifactType: 'pipeline'
-    artifactName: 'SeatBelt'
+    artifactName: 'seatbelt'
 
 - task: UniversalPackages@0
   inputs:
