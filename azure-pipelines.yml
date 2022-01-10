@@ -38,8 +38,8 @@ steps:
     Contents: '**'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
-- task: PublishBuildArtifacts@1
+- task: PublishPipelineArtifact@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'Seatbelt'
-    publishLocation: 'Container'
+    targetPath: '$(Pipeline.Workspace)'
+    artifactType: 'pipeline'
+    artifactName: 'SeatBelt'
