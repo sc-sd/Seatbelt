@@ -44,16 +44,10 @@ steps:
     artifactType: 'pipeline'
     artifactName: 'seatbelt'
 
-- task: PowerShell@2
-  inputs:
-      targetType: 'inline'
-      script: |
-            $name = $(basename $(gitRepoName)).ToLower()
-            Write-Host "##vso[task.setvariable variable=packageName]$name"
 
 - task: UniversalPackages@0
   inputs:
     command: publish
     vstsFeedPublish: 'acff27b9-e08e-437b-b42c-81bf094390c0/4a8e6bb5-62e4-4723-9954-efca922eeb33'
-    vstsFeedPackagePublish: '$(packageName)'
+    vstsFeedPackagePublish: 'seatbelt'
 
